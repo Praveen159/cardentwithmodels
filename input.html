@@ -1,0 +1,132 @@
+<html>
+<head>
+  <title> CAR DENT DETECTION </title>
+  <script src="https://code.jquery.com/jquery.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <style>
+	body {
+     background-image: linear-gradient(to left top, #354255, #1a6f87, #009f9d, #57cc91, #caf074);
+    /* padding-bottom: 120px; */
+}
+
+	.row {
+	margin-bottom: 10px;
+	}
+	.cars {
+		 width: 535px;
+		 height: 320px;
+	}
+	.carInfo {
+		font-size: 20px;
+		font-family: verdana;
+		font-weight: 15px;
+	}
+
+div.scrolling-limit {
+      width: 500px;
+      height: 20px;
+      background-color: yellow;
+      overflow: hidden;
+      white-space: nowrap;
+
+    }
+
+    div.scrolling {
+      position: relative;
+      -webkit-animation: scroll 20s infinite linear;
+      ;
+      -moz-animation: scroll 20s infinite linear;
+      -o-animation: scroll 20s infinite linear;
+      animation: scroll 20s infinite linear;
+    }
+
+    @keyframes scroll {
+      0% {
+        left: 500px;
+      }
+      100% {
+        left: -950px;
+      }
+    }
+
+    @-webkit-keyframes scroll {
+      0% {
+        left: 500px;
+      }
+      100% {
+        left: -950px;
+      }
+    }
+
+
+
+
+  </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">CD Detect</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="test.html">Test</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+              <li>
+                  <a href="contact-us.html">Contact Us</a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+  <div class="container">
+      <div class="jumbotron">
+          <h1>Car Dent Detection.</h1>      
+          <p></div>
+   
+
+    <div class="row">
+      <div class="col-xs-6"><p class="carInfo">CAR WITH NO DENTS</p><img src="https://auto.ndtvimg.com/car-images/big/maruti-suzuki/baleno/maruti-suzuki-baleno.jpg?v=51" class="cars" alt="Logo"></div>
+      <div class="col-xs-6"><p class="carInfo">CAR WITH  DENTS</p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkMt6QAldlOjCmnLHuAZVEASO5BVgqC8xixpoh2jpPZ1-lngy5EA" class="cars" alt="Logo"></div>
+      </div>
+</div>
+<br>
+<br>
+ <div class="row">
+           <div class="col-xs-6 col-xs-offset-3"> 
+<div class="scrolling-limit">
+          <div class="scrolling">
+            Please select an Image to check whether car has Dent or not!!!
+          </div>
+        </div>
+<br>
+<br>
+<form action="output" method="POST" enctype="multipart/form-data" class="form-inline">
+        
+          <div class="col-md-6 fileSelector">
+            <input type="file" class="form-control" id="images" name="file" multiple/>
+
+          </div>
+          <div class="col-md-4 uploadBtn">
+            <button type="submit" class="btn btn-labeled btn-primary" id="uploadImage">
+              <span class="btn-label">
+                <i class="glyphicon glyphicon-upload"></i>
+              </span>Upload</button>
+          </div>
+</div>
+</div>
+        </form>
+  <div id="footer">
+    <div class="container">
+      <p class="text-muted">This Bootstrap Example courtesy <a href="http://www.bootply.com">Bootply.com</a></p>
+    </div>
+  </div>
+</body>
+
+</html>
